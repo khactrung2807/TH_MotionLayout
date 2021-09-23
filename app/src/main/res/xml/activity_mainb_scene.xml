@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+       <KeyFrameSet>
+           <KeyPosition
+               motion:motionTarget="@+id/imageView4"
+               motion:framePosition="30"
+               motion:keyPositionType="parentRelative"
+               motion:percentX="0.287"
+               motion:percentY="0.397" />
+           <KeyPosition
+               motion:motionTarget="@+id/imageView4"
+               motion:framePosition="20"
+               motion:keyPositionType="parentRelative"
+               motion:percentX="0.2"
+               motion:percentY="0.7" />
+           <KeyPosition
+               motion:motionTarget="@+id/imageView4"
+               motion:framePosition="25"
+               motion:keyPositionType="parentRelative"
+               motion:percentX="0.05"
+               motion:percentY="0.532" />
+       </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:layout_marginEnd="56dp"
+            android:layout_height="95dp"
+            android:layout_marginRight="56dp"
+            android:layout_marginTop="60dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="83dp"
+            android:id="@+id/imageView4" />
+    </ConstraintSet>
+</MotionScene>
